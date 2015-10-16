@@ -35,4 +35,29 @@ All files in `config/conf.d` that end with the `.conf` extension are included.
     </Directory>
 
 # Query
+For example:
+
+    $ curl -k https://storage.example/.well-known/webfinger?resource=acct:foo@storage.example | python -mjson.tool
+    {
+        "links": [
+            {
+                "href": "https://storage.example/php-remote-storage/foo",
+                "properties": {
+                    "http://remotestorage.io/spec/version": "draft-dejong-remotestorage-03",
+                    "http://tools.ietf.org/html/rfc2616#section-14.16": "false",
+                    "http://tools.ietf.org/html/rfc6749#section-4.2": "https://storage.example/php-remote-storage/authorize",
+                    "http://tools.ietf.org/html/rfc6750#section-2.3": "false"
+                },
+                "rel": "remotestorage"
+            }
+        ],
+        "subject": "acct:foo@storage.example"
+    }
+
+Or without any configuration snippets:
+
+    {
+        "links": [],
+        "subject": "acct:foo@storage.example"
+    }
 
