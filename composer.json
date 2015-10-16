@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "email": "fkooman@tuxed.net",
+            "name": "Fran\u00e7ois Kooman"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "fkooman\\WebFinger\\": "src/"
+        }
+    },
+    "description": "Simple WebFinger Server",
+    "license": "AGPL-3.0",
+    "name": "fkooman/php-webfinger",
+    "require": {
+        "fkooman/http": "^1.1.0",
+        "fkooman/json": "^1.0.0",
+        "php": ">=5.3.0"
+    }
+}

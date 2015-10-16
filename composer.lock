@@ -1,0 +1,103 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "890d138bac0e778ae67588a558c74708",
+    "packages": [
+        {
+            "name": "fkooman/http",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fkooman/php-lib-http.git",
+                "reference": "0a94ec8a08d67055dd7e515cf327f03d53dc025b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fkooman/php-lib-http/zipball/0a94ec8a08d67055dd7e515cf327f03d53dc025b",
+                "reference": "0a94ec8a08d67055dd7e515cf327f03d53dc025b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-session": "*",
+                "ext-spl": "*",
+                "fkooman/json": "^1.0.0",
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "fkooman/rest": "Simple PHP library for writing REST services."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "fkooman\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "François Kooman",
+                    "email": "fkooman@tuxed.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple PHP library for dealing with HTTP requests and responses.",
+            "time": "2015-10-13 16:30:51"
+        },
+        {
+            "name": "fkooman/json",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fkooman/php-lib-json.git",
+                "reference": "f24b7ee1890b29358402defcd9581a4e969e40d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fkooman/php-lib-json/zipball/f24b7ee1890b29358402defcd9581a4e969e40d7",
+                "reference": "f24b7ee1890b29358402defcd9581a4e969e40d7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-spl": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "fkooman\\Json\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "François Kooman",
+                    "email": "fkooman@tuxed.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to encode and decode JSON",
+            "time": "2015-07-13 11:58:01"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": []
+}
