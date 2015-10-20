@@ -37,15 +37,15 @@ try {
     if (false === strpos($userAddress, '@')) {
         throw new BadRequestException('invalid email address provided');
     }
-    list($user, $domain) = explode('@', $userAddress);
+    list($user, $host) = explode('@', $userAddress);
 
     // FIXME: should this really be Host, or SERVER_NAME?
-    if ($domain !== $request->getHeader('Host')) {
-        throw new NotFoundException('domain does not match');
+    if ($host !== $request->getHeader('Host')) {
+        throw new NotFoundException('host does not match');
     }
 
     $webFingerData = array(
-        'subject' => sprintf('acct:%s@%s', $user, $domain),
+        'subject' => sprintf('acct:%s@%s', $user, $host),
         'links' => array(
         ),
     );
@@ -58,11 +58,11 @@ try {
     $webFingerJson = Json::encode($webFingerData);
     $webFingerJson = str_replace(
         array(
-            '__DOMAIN__',
+            '__HOST__',
             '__USER__',
         ),
         array(
-            $domain,
+            $host,
             $user,
         ),
         $webFingerJson
