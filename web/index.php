@@ -27,7 +27,7 @@ try {
         throw new BadRequestException('resource missing');
     }
 
-    $eResource = explode(':', $resource);
+    $eResource = explode(':', $resource, 2);
     if (2 !== count($eResource) || 'acct' !== $eResource[0]) {
         throw new BadRequestException('invalid resource');
     }
